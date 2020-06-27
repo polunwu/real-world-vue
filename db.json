@@ -44,6 +44,42 @@
       "date": "2019-02-02T23:27:00.000Z",
       "time": "1:00",
       "attendees": []
+    },
+    {
+      "id": 442069,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Mountain Climbing",
+      "description": "climb mounrain",
+      "location": "Taipei",
+      "date": "2020-06-28T10:20:00.000Z",
+      "time": "8:00",
+      "attendees": []
+    },
+    {
+      "id": 9717113,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Pant some trees",
+      "description": "we are going to plant some trees",
+      "location": "Taipei",
+      "date": "2020-06-28T10:27:00.000Z",
+      "time": "14:00",
+      "attendees": []
     }
   ]
 }
