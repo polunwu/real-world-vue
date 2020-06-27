@@ -44,7 +44,7 @@ export default {
         this.event = response.data
       })
       .catch(error => {
-        console.log('There was an error: ' + error)
+        console.log('There was an error: ', error)
       })
   }
 }

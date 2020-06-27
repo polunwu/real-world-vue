@@ -24,7 +24,7 @@ export default {
         this.events = response.data
       })
       .catch(error => {
-        console.log('There was an error: ' + error.response)
+        console.log('There was an error: ', error.response)
       })
   }
 }
