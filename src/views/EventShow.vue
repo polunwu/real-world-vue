@@ -29,14 +29,27 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState } from 'vuex'
+import NProgress from 'nprogress'
+import store from '@/store'
 
 export default {
   props: ['id'],
-  created() {
-    this.fetchEvent(this.id)
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    // This is 'Navigation Guards' from vue-router life-cycle
+
+    NProgress.start()
+    // We CAN NOT access to 'this' and mapActions here
+    // Because 'beforeRouteEnter' is exicuted bofore the component 'created'
+    // Use store to dispatch actions
+    store.dispatch('event/fetchEvent', routeTo.params.id).then(() => {
+      NProgress.done()
+      // Continue navigation
+      // Continue component life-cycle like 'create'
+      // This means conponent template will be created after the data returned
+      next()
+    })
   },
-  methods: mapActions('event', ['fetchEvent']),
   computed: mapState({
     event: state => state.event.event
   })
