@@ -9,7 +9,13 @@
         class="field"
       ></BaseSelect>
       <h3>Name & describe your event</h3>
-      <BaseInput label="Title" type="text" placeholder="Title" v-model="event.title" class="field"></BaseInput>
+      <BaseInput
+        label="Title"
+        type="text"
+        placeholder="Title"
+        v-model="event.title"
+        class="field"
+      ></BaseInput>
       <BaseInput
         label="Description"
         type="text"
@@ -30,7 +36,12 @@
         <label>Date</label>
         <datepicker v-model="event.date" placeholder="Select a date" />
       </div>
-      <BaseSelect label="Select a time" :options="times" v-model="event.time" class="field"></BaseSelect>
+      <BaseSelect
+        label="Select a time"
+        :options="times"
+        v-model="event.time"
+        class="field"
+      ></BaseSelect>
 
       <input type="submit" class="button -fill-gradient" value="Submit" />
     </form>
