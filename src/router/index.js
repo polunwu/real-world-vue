@@ -12,13 +12,14 @@ const routes = [
   {
     path: "/",
     name: "event-list",
-    component: EventList
+    component: EventList,
+    props: true
   },
   {
     path: "/event/:id",
     name: "event-show",
     component: EventShow,
-    props: true, // true: params will be sent in as props
+    props: true, // true: send params in as props
     beforeEnter(routeTo, routeFrom, next) {
       store.dispatch('event/fetchEvent', routeTo.params.id).then(event => {
         routeTo.params.event = event // pass event EventShow into component
