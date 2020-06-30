@@ -5,6 +5,7 @@ import EventList from "../views/EventList"
 import EventShow from "../views/EventShow"
 import NotFound from "../views/NotFound";
 import NetworkIssue from "../views/NetworkIssue";
+import Example from "../views/Example";
 import NProgress from 'nprogress'
 import store from '@/store'
 
@@ -50,6 +51,10 @@ const routes = [
     path: "/network-issue",
     name: "network-issue",
     component: NetworkIssue
+  },
+  {
+    path: "/example",
+    component: Example
   },
   {
     path: "*", // Catch all routes that doesn't match
