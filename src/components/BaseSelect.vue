@@ -1,8 +1,19 @@
 <template>
   <div>
     <label v-if="label">{{ label }}</label>
-    <select type="text" @input="updateValue" :value="value" v-bind="$attrs">
-      <option v-for="option in options" :key="option" :selected="option === value">{{ option }}</option>
+    <select
+      type="text"
+      @input="updateValue"
+      :value="value"
+      v-bind="$attrs"
+      v-on="$listeners"
+    >
+      <option
+        v-for="option in options"
+        :key="option"
+        :selected="option === value"
+        >{{ option }}</option
+      >
     </select>
   </div>
 </template>
@@ -29,5 +40,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
